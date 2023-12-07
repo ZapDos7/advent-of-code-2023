@@ -88,11 +88,6 @@ public class Part1 {
       one pair        A23A4     2
       high card       23456     1
       * */
-            var numsSorted = new ArrayList<>(this.handAsNumbers);
-            Collections.sort(numsSorted);
-            if (isConsecutive(numsSorted)) {
-                return 5;
-            }
             Map<Integer, Integer> howManyPerChar = new HashMap<>();
             this.handAsNumbers.forEach(c -> howManyPerChar.put(c, howManyPerChar.get(c) == null ? 1 : howManyPerChar.get(c) + 1));
             var numOfPairs = howManyPerChar.values().stream().filter(i -> i.equals(2)).toList();
@@ -105,6 +100,9 @@ public class Part1 {
             if (numOfQuartets.size() == 1) {
                 return 6;
             }
+            if (numOfPairs.size() == 1 && numOfTriplets.size() == 1) {
+              return 5;
+            }
             if (numOfTriplets.size() == 1) {
                 return 4;
             }
@@ -115,15 +113,6 @@ public class Part1 {
                 return 2;
             }
             return 1;
-        }
-
-        private boolean isConsecutive(List<Integer> input) {
-            //cardValue
-            boolean is = false;
-            for (int i = 0; i < input.size() - 1; i++) {
-                is = input.get(i) == input.get(i + 1) + 1;
-            }
-            return is;
         }
 
         public int compare(CardInfo cardInfo) {

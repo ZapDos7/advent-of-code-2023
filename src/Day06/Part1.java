@@ -48,7 +48,7 @@ public class Part1 {
             return result;
         }
         for (int i = 0; i < times.size(); i++) {
-            result.add(new RaceInfo(i+1, Integer.parseInt(times.get(i)), Integer.parseInt(distances.get(i))));
+            result.add(new RaceInfo(i + 1, Integer.parseInt(times.get(i)), Integer.parseInt(distances.get(i))));
         }
         return result;
     }
@@ -56,4 +56,26 @@ public class Part1 {
     private static List<String> parseLine(String s) {
         return Arrays.stream(s.split(":")[1].trim().split("\\s")).filter(i -> !i.isBlank()).toList();
     }
+
+    public static class RaceInfo {
+        int id;
+        int duration;
+        int distance;
+
+        public RaceInfo(int id, int duration, int distance) {
+            this.id = id;
+            this.duration = duration;
+            this.distance = distance;
+        }
+
+        @Override
+        public String toString() {
+            return "RaceInfo{" +
+                    "id=" + id +
+                    ", duration=" + duration +
+                    ", distance=" + distance +
+                    '}';
+        }
+    }
+
 }

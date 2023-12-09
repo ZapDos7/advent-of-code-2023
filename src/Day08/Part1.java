@@ -3,7 +3,6 @@ package Day08;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Part1 {
     public static void main(String[] args) {
@@ -91,7 +90,4 @@ public class Part1 {
         return List.of(resultStringBuilder.toString().split("\n"));
     }
 
-    enum Direction {
-        LEFT, RIGHT
-    }
 }

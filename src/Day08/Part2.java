@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static Day08.ParsingFunctions.*;
+import static utils.ReadInputStream.readFromInputStream;
 
 public class Part2 {
     public static void main(String[] args) {

@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.List;
 
 import static Day08.ParsingFunctions.*;
+import static utils.ReadInputStream.readFromInputStream;
 
 public class Part1 {
     public static void main(String[] args) {

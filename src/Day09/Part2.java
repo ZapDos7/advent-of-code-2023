@@ -3,10 +3,10 @@ package Day09;
 import java.io.*;
 import java.util.*;
 
+import static Day09.Part1.containsOnlyZeros;
 import static utils.ReadInputStream.readFromInputStream;
 
-
-public class Part1 {
+public class Part2 {
     public static void main(String[] args) {
 
         InputStream inputStream = null;
@@ -15,7 +15,7 @@ public class Part1 {
 //            File file = new File("src/../in/day9/testInput.txt");
             inputStream = new FileInputStream(file);
             List<String> input = readFromInputStream(inputStream);
-            var result = input.stream().map(Part1::predict).reduce(0, Integer::sum);
+            var result = input.stream().map(Part2::predict).reduce(0, Integer::sum);
             System.out.println("Result = " + result);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -40,26 +40,28 @@ public class Part1 {
             input = tempList;
             sequences.add(input);
         }
-        int lastValue = 0;
+        int firstValue = 0;
         for (int i = sequences.size()-1; i > 0 ; i--) {
             List<Integer> line = new ArrayList<>(sequences.get(i));
             List<Integer> nextLine = new ArrayList<>(sequences.get(i - 1));
-            int previousLineSize = line.size();
+//            System.out.println("Comparing " + line + " with " + nextLine);
             if (containsOnlyZeros(line)) {
                 line.add(0);
             } else {
-                var previousLastValue = nextLine.get(nextLine.size()-1);
-                lastValue = previousLastValue + line.get(previousLineSize - 1);
+                var previousFirstValue = nextLine.get(0);
+//                System.out.println("First value of line2 was " + previousFirstValue);
+                firstValue = previousFirstValue - line.get(0);
+//                System.out.println("First value of line2 will be " + firstValue);
                 sequences.remove(i - 1);
-                nextLine.add(lastValue);
+                List<Integer> tmp = new ArrayList<>();
+                tmp.add(firstValue);
+                tmp.addAll(nextLine);
+                nextLine = tmp;
+//                System.out.println("\tNew next line = " + nextLine);
                 sequences.add(i-1, nextLine);
             }
         }
-        return lastValue;
-    }
-
-    static boolean containsOnlyZeros(List<Integer> list) {
-        Set<Integer> uniqueValues = new TreeSet<>(list);
-        return uniqueValues.contains(0) && uniqueValues.size() == 1;
+//        System.out.println("\t\tcalculated " + firstValue + "\n");
+        return firstValue;
     }
 }

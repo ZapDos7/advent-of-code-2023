@@ -2,5 +2,78 @@
 My answers for the [2023 Advent of Code](https://adventofcode.com/2023/)
 
 To Do:
- - [ ] Implement Day 5 parts 1 & 2
- - [ ] Fix Day 8 part 2
+ - [X] Day 1
+   - [X] Part 1
+   - [X] Part 2
+- [X] Day 2
+    - [X] Part 1
+    - [X] Part 2
+- [X] Day 3
+  - [X] Part 1
+  - [X] Part 2
+- [X] Day 4
+    - [X] Part 1
+    - [X] Part 2
+- [ ] Day 5
+    - [ ] Part 1
+    - [ ] Part 2
+- [X] Day 6
+    - [X] Part 1
+    - [X] Part 2
+- [X] Day 7
+  - [X] Part 1
+  - [X] Part 2
+- [ ] Day 8
+    - [X] Part 1
+    - [ ] Part 2
+- [X] Day 9
+    - [X] Part 1
+    - [X] Part 2
+- [ ] Day 10
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 11
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 12
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 13
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 14
+  - [ ] Part 1
+  - [ ] Part 2
+- [ ] Day 15
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 16
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 17
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 18
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 19
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 20
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 21
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 22
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 23
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 24
+    - [ ] Part 1
+    - [ ] Part 2
+- [ ] Day 25
+    - [ ] Part 1
+    - [ ] Part 2
